@@ -1,10 +1,8 @@
 {
-    "version": 2,
-    "builds": [{ "src": "adquisiciones_address/wsgi.py", "use": "@vercel/python" }],
-    "routes": [{ "src": "/api/.*", "dest": "adquisiciones_address/wsgi.py" }],
-    "env": {
-      "DEBUG": "false",
-      "DJANGO_SETTINGS_MODULE": "adquisiciones_address.settings"
-    }
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "adquisiciones_address/wsgi.py"
+      }
+    ]
   }
-  
