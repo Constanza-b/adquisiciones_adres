@@ -48,7 +48,7 @@ MIME_TYPES = {
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",  # Origen del frontend
 ]
-ROOT_URLCONF = 'adquisiciones_address.urls'
+ROOT_URLCONF = 'adres.urls'
 
 TEMPLATES = [
     {
@@ -66,7 +66,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'adquisiciones_address.wsgi.application'
+WSGI_APPLICATION = 'adres.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
