@@ -10,6 +10,5 @@ from django.views.static import serve
 from django.contrib import admin
 
 urlpatterns = [  
-    path('', include('adquisiciones.urls')),
-    path('api/', include(router.urls)),
+    path('', include('adquisiciones.urls'))   
 ]
