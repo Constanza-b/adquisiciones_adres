@@ -62,7 +62,7 @@ Asegúrate de tener instalados los siguientes componentes antes de comenzar:
     python manage.py runserver
     ```
 
-### Frontend
+### Frontend (Ejecución opcional)
 
 1. Navega a la carpeta `frontend`:
 
