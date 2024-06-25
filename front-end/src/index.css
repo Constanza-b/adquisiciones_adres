@@ -1,0 +1,86 @@
+:root {
+  --bs-primary: #4E67B5; /* Color primario */
+  --bs-primary-rgb:  #4E67B5; /* Color primario */
+  --bs-primary-contrast: #fff; /* Contraste para el color primario */
+  --bs-primary-contrast-rgb: rgb(255, 255, 255); /* Contraste RGB para el color primario */
+  --bs-secondary: #009C9A; /* Color secundario */
+  --bs-success: #0BDAB2; /* Color de éxito */
+}
+
+.bg-primary {
+  --bs-bg-opacity: 1;
+  background-color: var(--bs-primary) !important;
+}
+
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #4E67B5; /* Color primario */
+  --bs-btn-border-color: #4E67B5; /* Color primario */
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #273656; /* Color más oscuro para el hover */
+  --bs-btn-hover-border-color: #273656; /* Color más oscuro para el hover */
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #273656; /* Color más oscuro para el estado activo */
+  --bs-btn-active-border-color: #273656; /* Color más oscuro para el estado activo */
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #4E67B5; /* Color primario */
+  --bs-btn-disabled-border-color: #4E67B5; /* Color primario */
+}
+.btn-warning {
+  background-color: #009C9A !important; /* Color secundario */
+  border: none;
+  color: #fff; /* Color del texto blanco */
+}
+
+.btn-danger {
+  background-color: #273656 !important; /* Color secundario */
+  border: none;
+  color: #fff; /* Color del texto blanco */
+}
+
+
+.btn-secondary {
+  background-color: #009C9A; /* Color secundario */
+  border: none;
+  color: #fff; /* Color del texto blanco */
+}
+
+.btn-secondary:hover {
+  background-color: #0BDAB2; /* Color más claro en hover */
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Asegúrate de que el encabezado esté por encima de otros elementos */
+  background-color: var(--bs-primary); /* Color primario */
+}
+
+input:focus, 
+textarea:focus, 
+select:focus {
+  border-color: #4E67B5!important; /* Cambia este valor al color primario de Bootstrap */
+  box-shadow: 0 0 0 0.25rem rgba(78, 103, 181, 0.25)!important; /* Ajusta el color y la opacidad según sea necesario */
+}
+
+.custom-navbar {
+  background-color: #4E67B5 !important;
+}
+
+.custom-navbar {
+  background-color: #4E67B5 !important;
+}
+
+.custom-navbar .nav-link {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.custom-navbar .nav-link:hover {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+.custom-navbar .navbar-toggler-icon {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+}
