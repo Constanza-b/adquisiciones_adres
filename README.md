@@ -4,15 +4,19 @@ Bienvenido al proyecto de Gestión de Adquisiciones para ADRES. Este proyecto se
 
 ## Tabla de Contenidos
 
-1. [Requisitos](#requisitos)
-2. [Instalación](#instalación)
-   - [Backend](#backend)
-   - [Frontend](#frontend)
-   - [Compilación del Frontend](#compilación-del-frontend)
-3. [Uso](#uso)
-4. [Estructura del Proyecto](#estructura-del-proyecto)
-5. [Contribuir](#contribuir)
-6. [Licencia](#licencia)
+- [Gestión de Adquisiciones ADRES](#gestión-de-adquisiciones-adres)
+  - [Tabla de Contenidos](#tabla-de-contenidos)
+  - [Requisitos](#requisitos)
+  - [Instalación](#instalación)
+    - [Backend](#backend)
+    - [Frontend](#frontend)
+    - [Compilación del Frontend](#compilación-del-frontend)
+  - [Uso](#uso)
+    - [Acceder a la Aplicación](#acceder-a-la-aplicación)
+    - [Funcionalidades Principales](#funcionalidades-principales)
+  - [Estructura del Proyecto](#estructura-del-proyecto)
+    - [Backend](#backend-1)
+    - [Frontend](#frontend-1)
 
 ## Requisitos
 
@@ -40,26 +44,19 @@ Asegúrate de tener instalados los siguientes componentes antes de comenzar:
     cd adquisiciones_adres
     ```
 
-3. Crea y activa un entorno virtual (opcional pero recomendado):
-
-    ```bash
-    python -m venv venv
-    source venv/bin/activate  # En Windows usa `venv\Scripts\activate`
-    ```
-
-4. Instala las dependencias del proyecto:
+3. Instala las dependencias del proyecto:
 
     ```bash
     pip install -r requirements.txt
     ```
 
-5. Realiza las migraciones de la base de datos:
+4. Realiza las migraciones de la base de datos (Paso opcional no se requiere porque el proyecto ya tiene las migraciones):
 
     ```bash
     python manage.py migrate
     ```
 
-6. Inicia el servidor de desarrollo:
+5. Inicia el servidor de desarrollo:
 
     ```bash
     python manage.py runserver
@@ -93,7 +90,7 @@ Asegúrate de tener instalados los siguientes componentes antes de comenzar:
     npm run build
     ```
 
-2. Copia los archivos compilados a la carpeta `static` de Django:
+2. Copia los archivos compilados a la carpeta `static` de Django módulo adquisiciones (Este paso no se requiere porque ya se realizó):
 
     ```bash
     cp -r dist/* ../static/
@@ -143,17 +140,3 @@ Asegúrate de tener instalados los siguientes componentes antes de comenzar:
     - `Navbar.jsx`: Barra de navegación para la aplicación.
   - **services/**: Servicios para la interacción con el API.
     - `AdquisicionService.jsx`: Opera sobre adquisiciones a través de un API REST.
-
-## Contribuir
-
-Si deseas contribuir al proyecto:
-
-1. Haz un fork del repositorio.
-2. Crea una rama para tu funcionalidad o corrección de errores (`git checkout -b feature/nueva-funcionalidad`).
-3. Realiza tus cambios y haz commits (`git commit -m 'Añadir nueva funcionalidad'`).
-4. Envía tus cambios al repositorio remoto (`git push origin feature/nueva-funcionalidad`).
-5. Crea un Pull Request desde tu rama hacia el repositorio principal.
-
-## Licencia
-
-Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
