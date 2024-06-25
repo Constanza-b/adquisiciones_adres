@@ -48,8 +48,6 @@ const AdquisicionesFormulario = () => {
       let response;
       if (id) {
         response = await AdquisicionService.update(id, {
-          nombre: data.nombre,
-          direccion: data.direccion,
           presupuesto: parseFloat(data.presupuesto),
           unidad: data.unidad,
           tipo: data.tipo,
@@ -61,9 +59,7 @@ const AdquisicionesFormulario = () => {
           documentacion: data.documentacion,
         });
       } else {
-        response = await AdquisicionService.create({
-          nombre: data.nombre,
-          direccion: data.direccion,
+        response = await AdquisicionService.create({       
           presupuesto: parseFloat(data.presupuesto),
           unidad: data.unidad,
           tipo: data.tipo,
@@ -106,14 +102,7 @@ const AdquisicionesFormulario = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="container mt-4">
-      <div className="mb-3">
-        <label htmlFor="nombre" className="form-label">Nombre</label>
-        <input type="text" className="form-control" id="nombre" {...register('nombre')} />
-      </div>
-      <div className="mb-3">
-        <label htmlFor="direccion" className="form-label">Dirección</label>
-        <input type="text" className="form-control" id="direccion" {...register('direccion')} />
-      </div>
+     
       <div className="mb-3">
         <label htmlFor="presupuesto" className="form-label">Presupuesto</label>
         <input type="number" step="0.01" className="form-control" id="presupuesto" {...register('presupuesto')} />

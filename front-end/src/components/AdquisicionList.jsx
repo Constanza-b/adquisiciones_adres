@@ -118,8 +118,6 @@ const AdquisicionList = () => {
       <table className="table">
         <thead>
           <tr>
-            <th>Nombre</th>
-            <th>Dirección</th>
             <th>Presupuesto</th>
             <th>Unidad</th>
             <th>Tipo de Bien o Servicio</th>
@@ -135,8 +133,6 @@ const AdquisicionList = () => {
         <tbody>
           {currentItems.map(adquisicion => (
             <tr key={adquisicion.id}>
-              <td>{adquisicion.nombre}</td>
-              <td>{adquisicion.direccion}</td>
               <td>{adquisicion.presupuesto}</td>
               <td>{adquisicion.unidad}</td>
               <td>{adquisicion.tipo}</td>
