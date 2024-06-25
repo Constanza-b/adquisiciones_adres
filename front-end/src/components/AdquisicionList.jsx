@@ -112,7 +112,8 @@ const AdquisicionList = () => {
   };
 
   return (
-    <div className="container mt-4">
+    <div className="row mt-4">
+      <div className='col'>
       <h2>Lista de Adquisiciones</h2>
       <table className="table">
         <thead>
@@ -168,6 +169,8 @@ const AdquisicionList = () => {
           </li>
         </ul>
       </nav>
+      </div>
+    
     </div>
   );
 };
