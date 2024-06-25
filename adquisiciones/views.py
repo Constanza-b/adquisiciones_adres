@@ -33,7 +33,7 @@ class AdquisicionViewSet(viewsets.ModelViewSet):
         return Response(data={'deleted': True})
      
     @action(detail=True, methods=['GET'])
-    def buscar_por_id(self, request, pk=None):
+    def search_id(self, request, pk=None):
         queryset = Adquisicion.objects.filter(id=pk)
         adquisicion = get_object_or_404(queryset, pk=pk)
         serializer = AdquisicionSerializer(adquisicion)
