@@ -6,11 +6,11 @@ import { useParams } from 'react-router-dom';
 
 const AdquisicionesFormulario = () => {
   const { id } = useParams();
-  const { register, handleSubmit, setValue, formState: { errors } } = useForm();
+  const { register, handleSubmit, setValue, formState: { errors },reset} = useForm();
   const [loading, setLoading] = useState(false);
-  console.log("existe ",id);
+  console.log("existe ", id);
+
   useEffect(() => {
-  
     if (id) {
       const fetchAdquisicion = async () => {
         try {
@@ -57,9 +57,11 @@ const AdquisicionesFormulario = () => {
           fecha_adquisicion: data.fecha_adquisicion,
           proveedor: data.proveedor,
           documentacion: data.documentacion,
+          activo: data.activo === true || data.activo === 'on', // Campo nuevo
         });
+        reset();
       } else {
-        response = await AdquisicionService.create({       
+        response = await AdquisicionService.create({
           presupuesto: parseFloat(data.presupuesto),
           unidad: data.unidad,
           tipo: data.tipo,
@@ -69,7 +71,9 @@ const AdquisicionesFormulario = () => {
           fecha_adquisicion: data.fecha_adquisicion,
           proveedor: data.proveedor,
           documentacion: data.documentacion,
+          activo: data.activo === true || data.activo === 'on', // Campo nuevo
         });
+        reset();
       }
 
       Swal.close();
@@ -102,7 +106,6 @@ const AdquisicionesFormulario = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="container mt-4">
-     
       <div className="mb-3">
         <label htmlFor="presupuesto" className="form-label">Presupuesto</label>
         <input type="number" step="0.01" className="form-control" id="presupuesto" {...register('presupuesto')} />
@@ -139,7 +142,10 @@ const AdquisicionesFormulario = () => {
         <label htmlFor="documentacion" className="form-label">Documentación</label>
         <textarea className="form-control" id="documentacion" {...register('documentacion')} />
       </div>
-
+      <div className="mb-3 form-check form-switch">
+        <input className="form-check-input" type="checkbox" id="activo" {...register('activo')} />
+        <label className="form-check-label" htmlFor="activo">Activo</label>
+      </div>
       {loading ? (
         <p>Cargando...</p>
       ) : (
